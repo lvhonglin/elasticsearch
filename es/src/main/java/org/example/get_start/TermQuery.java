@@ -1,4 +1,4 @@
-package org.example.client.query;
+package org.example.get_start;
 
 import co.elastic.clients.elasticsearch.ElasticsearchClient;
 import co.elastic.clients.elasticsearch._types.FieldValue;
