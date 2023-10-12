@@ -19,6 +19,7 @@ import java.util.function.Function;
 
 public class TermQuery {
     //使用lambda表达式
+    //最开始使用的时候如果es的yaml中没有配置xpack.security.enabled: false会报错
     public static void main(String[] args) throws IOException {
         RestClient restClient = RestClient.builder(new HttpHost("127.0.0.1", 9200)).build();
         RestClientTransport transport = new RestClientTransport(restClient, new JacksonJsonpMapper());
