@@ -31,7 +31,6 @@ public class TermQuery {
                 });
             });
         });
-
         SearchResponse<Product> search = client.search(query.build(), Product.class);
         List<Hit<Product>> hits = search.hits().hits();
         for(Hit<Product> hit:hits){
