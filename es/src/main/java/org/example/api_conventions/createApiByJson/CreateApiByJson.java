@@ -22,6 +22,7 @@ public class CreateApiByJson {
         RestClient restClient = RestClient.builder(new HttpHost("127.0.0.1", 9200)).build();
         RestClientTransport transport = new RestClientTransport(restClient, new JacksonJsonpMapper());
         ElasticsearchClient client = new ElasticsearchClient(transport);
+        //从resource下获取some-index.json文件
         InputStream resourceAsStream = CreateApiByJson.class.getResourceAsStream("/some-index.json");
         SearchRequest.Builder query = new SearchRequest.Builder().index("productjuhe").withJson(resourceAsStream);
         SearchResponse<Product> search = client.search(query.build(), Product.class);
