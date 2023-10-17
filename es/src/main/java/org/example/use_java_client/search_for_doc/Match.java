@@ -17,7 +17,7 @@ import java.io.IOException;
 import java.util.List;
 import java.util.function.Function;
 
-public class Test1 {
+public class Match {
     public static void main(String[] args) throws IOException {
         RestClient restClient = RestClient.builder(new HttpHost("127.0.0.1", 9200)).build();
         RestClientTransport transport = new RestClientTransport(restClient, new JacksonJsonpMapper());
